@@ -163,3 +163,200 @@ aside h1 {
     margin-left: 0px;
 }
 
+aside img {
+    display: block;
+    width: 30%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+dl {
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+}
+
+
+dl dd {
+    margin-bottom: 20px;
+}
+
+nav .bottom {
+    background-color: var(--color-navActive);
+    color: var(--color-textColor);
+    padding: 15px all;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+nav .bottom ul li {
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+nav .bottom ul a {
+    color: white;
+}
+
+footer p {
+    color: var(--color-textColor);
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+/* NEED HELP HERE */
+nav .bottom ul {
+    flex-shrink: 1;
+    flex-grow: 0;
+    max-width: 150px;
+}
+
+@media screen and (max-width: 480px){
+
+body {
+    background-color: var(--color-Shadow);
+    color: var(--color-textBack);
+}
+
+aside {
+    display: none;
+}
+
+article img {
+    display: none;
+}
+
+section .spotlight {
+    display: none;
+}
+
+nav .top ul {
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+nav .top ul li {
+    font-size: 2.2rem;
+    flex: default 130px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+nav .top ul li a {
+    padding-top: 50%;
+    padding-bottom: 50%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+/* Need Help on this. Not finished */
+nav .top ul li:nth-of-type(1) {
+    background-image: image(cw_image01.png);
+    background-position: center;
+    background-repeat: none;
+    background-size: auto;
+}
+
+nav .top ul li:nth-of-type(2) {
+    background-image: image(cw_image02.png);
+    background-position: center;
+    background-repeat: none;
+    background-size: auto;
+}
+
+nav .top ul li:nth-of-type(3) {
+    background-image: image(cw_image03.png);
+    background-position: center;
+    background-repeat: none;
+    background-size: auto;
+}
+
+nav .top ul li:nth-of-type(4) {
+    background-image: image(cw_image04.png);
+    background-position: center;
+    background-repeat: none;
+    background-size: auto;
+}
+
+nav .top ul li:nth-of-type(5) {
+    background-image: image(cw_image05.png);
+    background-position: center;
+    background-repeat: none;
+    background-size: auto;
+}
+
+nav .top ul li:nth-of-type(6) {
+    background-image: image(cw_image06.png);
+    background-position: center;
+    background-repeat: none;
+    background-size: auto;
+}
+
+p .links {
+    display: flexbox;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
+p .links a {
+    background-color: var(--color-navActive);
+    color: white;
+    text-decoration: none;
+    padding: all 10px;
+    border-radius: 20px;
+}
+
+
+@media screen and (min-width: 481px){
+
+body {
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+article {
+    flex: 400px;
+    flex-grow: 2;
+    flex-shrink: 1;
+}
+
+aside {
+    flex: 200px;
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+nav .top ul {
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: var(--color-Shadow);
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+nav .top ul li {
+    flex: 80px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+p .links {
+    display: none;
+}
+}
