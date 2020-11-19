@@ -7,15 +7,50 @@
     --color-textColor: rgb(111, 111, 111);
 }
 
-article, aside, figcaption, figure,
-footer, header, main, nav, section { 
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
     display: block;
 }
 
-address, article, aside, blockquote, body, cite, 
-div, dl, dt, dd, em, figcaption, figure, footer, 
-h1, h2, h3, h4, h5, h6, header, html, img, 
-li, main, nav, nav a, ol, p, section, span, ul {
+address,
+article,
+aside,
+blockquote,
+body,
+cite,
+div,
+dl,
+dt,
+dd,
+em,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+img,
+li,
+main,
+nav,
+nav a,
+ol,
+p,
+section,
+span,
+ul {
     margin: 0;
     padding: 0;
     border: 0;
@@ -24,14 +59,15 @@ li, main, nav, nav a, ol, p, section, span, ul {
     background: transparent;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
 
 body {
     line-height: 1.2em;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -44,6 +80,9 @@ nav a {
     text-decoration: none;
 }
 
+
+/* HTML and Body */
+
 html {
     background-color: var(--color-HTML);
     font-family: Verdana, Geneva, sans-serif;
@@ -53,39 +92,33 @@ html {
 body {
     background: white;
     max-width: 1024px;
-    margin: auto;
+    margin: 0px auto;
     box-shadow: var(--color-Shadow) 10px 10px 25px, var(--color-Shadow) -10px 10px 25px;
 }
 
-header body {
+body>header {
     background: white;
     width: 100%;
 }
 
-img .logoImage {
+img#logoImage {
     display: block;
     width: 100%;
     max-width: 600px;
-    margin: auto;
+    margin: 0px auto;
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.4rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin: 15px all;
 }
 
-nav .top ul {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+nav.top ul li {
+    margin: 10px all;
 }
 
-nav .top ul a {
+nav.top ul li a {
     color: white;
     display: block;
     font-size: 1.2rem;
@@ -96,53 +129,49 @@ nav .top ul a {
     padding-right: 0%;
 }
 
-nav .top ul a:hover {
+nav.top ul a:hover {
     color: var(--color-navActive);
     text-shadow: 0px 0px 2px black, 0px 0px 15px white;
 }
 
-article p+p img {
+article p:nth-of-type(2) img {
     float: right;
     width: 45%;
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 120px;
     margin-left: 50px;
-    translate: -60px;
-    rotate: 30;
+    transform: translateY(60px) translateX(-0px) rotate(30deg);
     box-shadow: var(--color-Shadow) 10px -10px 30px;
 }
 
-section .spotlight {
+section.spotlight {
     background-color: var(--color-Spotlight);
     padding-bottom: 15px;
     overflow: auto;
 }
 
-section .spotlight h1 {
+section.spotlight h1 {
     font-size: 2.5rem;
     color: var(--color-textColor);
     text-shadow: white -2px 0px 1px, white -5px 0px 30px;
-    padding-top: 20px;
-    padding-right: 15px;
-    padding-bottom: 10px;
-    padding-left: 0px;
+    padding: 20px 15px 10px 0px;
     text-align: right;
 }
 
-section .spotlight img {
+section.spotlight img {
     width: 35%;
     float: left;
     display: block;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    margin-left: 15px;
+    margin: 20px 20px 10px 15px;
 }
 
-section .spotlight p {
+section.spotlight p {
     margin-bottom: 0;
 }
+
+
+/* Aside Styles */
 
 aside {
     background-color: var(--color-textBack);
@@ -155,21 +184,19 @@ aside a {
 aside h1 {
     font-size: 2rem;
     font-weight: normal;
-    justify-content: space-between 0.4rem;
-    text-align: center;
-    margin-top: 20px;
-    margin-right: 0px;
-    margin-bottom: 25px;
-    margin-left: 0px;
+    letter-spacing: .4rem;
+    margin: 20px 0px 25px 0px;
 }
 
 aside img {
     display: block;
     width: 30%;
     margin: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px auto;
 }
+
+
+/* Description List */
 
 dl {
     text-align: center;
@@ -179,12 +206,11 @@ footer {
     width: 100%;
 }
 
-
 dl dd {
     margin-bottom: 20px;
 }
 
-nav .bottom {
+nav#bottom {
     background-color: var(--color-navActive);
     color: var(--color-textColor);
     padding: 15px all;
@@ -194,12 +220,12 @@ nav .bottom {
     justify-content: center;
 }
 
-nav .bottom ul li {
+nav#bottom ul li {
     font-size: 1rem;
     line-height: 1.8rem;
 }
 
-nav .bottom ul a {
+nav#bottom ul a {
     color: white;
 }
 
@@ -209,154 +235,126 @@ footer p {
     text-align: center;
     background-color: black;
     margin: 0;
-    padding-top: 10px;
-    padding-right: 0px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    padding: 10px 0px;
 }
 
-/* NEED HELP HERE */
-nav .bottom ul {
+nav#bottom ul {
     flex-shrink: 1;
     flex-grow: 0;
-    max-width: 150px;
+    flex-basis: 150px;
 }
 
-@media screen and (max-width: 480px){
-
-body {
-    background-color: var(--color-Shadow);
-    color: var(--color-textBack);
+@media(max-width: 480px) {
+    body {
+        background-color: var(--color-Shadow);
+        color: var(--color-textBack);
+    }
+    aside {
+        display: none;
+    }
+    article img {
+        display: none;
+    }
+    section.spotlight {
+        display: none;
+    }
+    nav.top ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    nav.top ul li {
+        font-size: 2.2rem;
+        flex-basis: 130px;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    nav.top ul li a {
+        padding: 50% 0%;
+    }
+    /* Need Help on this. Not finished */
+    nav.top ul li:nth-of-type(1) {
+        background-image: url(images/cw_image01.png);
+        background-position: center;
+        background-repeat: none;
+        background-size: contain;
+    }
+    nav.top ul li:nth-of-type(2) {
+        background-image: url(images/cw_image02.png);
+        background-position: center;
+        background-repeat: none;
+        background-size: contain;
+    }
+    nav.top ul li:nth-of-type(3) {
+        background-image: url(images/cw_image03.png);
+        background-position: center;
+        background-repeat: none;
+        background-size: contain;
+    }
+    nav.top ul li:nth-of-type(4) {
+        background-image: url(images/cw_image04.png);
+        background-position: center;
+        background-repeat: none;
+        background-size: contain;
+    }
+    nav.top ul li:nth-of-type(5) {
+        background-image: url(images/cw_image05.png);
+        background-position: center;
+        background-repeat: none;
+        background-size: contain;
+    }
+    nav.top ul li:nth-of-type(6) {
+        background-image: url(images/cw_image06.png);
+        background-position: center;
+        background-repeat: none;
+        background-size: contain;
+    }
+    p#links {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    p#links a {
+        background-color: var(--color-navActive);
+        color: white;
+        text-decoration: none;
+        padding: all 10px;
+        border-radius: 20px;
+    }
 }
 
-aside {
-    display: none;
-}
-
-article img {
-    display: none;
-}
-
-section .spotlight {
-    display: none;
-}
-
-nav .top ul {
-    display: flexbox;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-nav .top ul li {
-    font-size: 2.2rem;
-    flex: default 130px;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-nav .top ul li a {
-    padding-top: 50%;
-    padding-bottom: 50%;
-    padding-left: 0%;
-    padding-right: 0%;
-}
-
-/* Need Help on this. Not finished */
-nav .top ul li:nth-of-type(1) {
-    background-image: image(cw_image01.png);
-    background-position: center;
-    background-repeat: none;
-    background-size: auto;
-}
-
-nav .top ul li:nth-of-type(2) {
-    background-image: image(cw_image02.png);
-    background-position: center;
-    background-repeat: none;
-    background-size: auto;
-}
-
-nav .top ul li:nth-of-type(3) {
-    background-image: image(cw_image03.png);
-    background-position: center;
-    background-repeat: none;
-    background-size: auto;
-}
-
-nav .top ul li:nth-of-type(4) {
-    background-image: image(cw_image04.png);
-    background-position: center;
-    background-repeat: none;
-    background-size: auto;
-}
-
-nav .top ul li:nth-of-type(5) {
-    background-image: image(cw_image05.png);
-    background-position: center;
-    background-repeat: none;
-    background-size: auto;
-}
-
-nav .top ul li:nth-of-type(6) {
-    background-image: image(cw_image06.png);
-    background-position: center;
-    background-repeat: none;
-    background-size: auto;
-}
-
-p .links {
-    display: flexbox;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: baseline;
-}
-
-p .links a {
-    background-color: var(--color-navActive);
-    color: white;
-    text-decoration: none;
-    padding: all 10px;
-    border-radius: 20px;
-}
-
-
-@media screen and (min-width: 481px){
-
-body {
-    display: flexbox;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-article {
-    flex: 400px;
-    flex-grow: 2;
-    flex-shrink: 1;
-}
-
-aside {
-    flex: 200px;
-    flex-grow: 1;
-    flex-shrink: 2;
-}
-
-nav .top ul {
-    display: flexbox;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: var(--color-Shadow);
-    height: 50px;
-    vertical-align: middle;
-    text-align: center;
-}
-
-nav .top ul li {
-    flex: 80px;
-    flex-grow: 0;
-    flex-shrink: 1;
-}
-
-p .links {
-    display: none;
-}
+@media(min-width: 481px) {
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    article {
+        flex: 400px;
+        flex-grow: 2;
+        flex-shrink: 1;
+    }
+    aside {
+        flex: 200px;
+        flex-grow: 1;
+        flex-shrink: 2;
+    }
+    nav.top ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-color: var(--color-Shadow);
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    nav.top ul li {
+        flex: 80px;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+    p#links {
+        display: none;
+    }
 }
